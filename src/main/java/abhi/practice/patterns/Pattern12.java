@@ -17,9 +17,9 @@ public class Pattern12 {
     }
 
     private static void createPattern(int numOfRows) {
+        int noOfColumns = 2 * numOfRows;
         for (int row = 0; row < numOfRows; row++) {
             int initValue = 1;
-            int noOfColumns = 2 * numOfRows;
             for (int col = 0; col < noOfColumns ; col++) {
                 if((col < row +1) || (col >= ((noOfColumns - (row + 1))))) {
                     if(col <= row){
