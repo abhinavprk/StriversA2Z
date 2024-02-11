@@ -5,11 +5,11 @@ package abhi.practice.basic_math.digits_in_a_number;
  */
 public class FourthSolution {
     public static void main(String[] args) {
-        System.out.println(countDigits(236349));
-        System.out.println(countDigits(400));
+        System.out.println(countDigits(-41));
+        /*System.out.println(countDigits(400));
         System.out.println(countDigits(-41));
         System.out.println(countDigits(1));
-        System.out.println(countDigits(-1));
+        System.out.println(countDigits(-1));*/
     }
 
     private static int countDigits(int input) {
@@ -23,11 +23,8 @@ public class FourthSolution {
 
             If the log10 of an int is x.yzr, then the number of digits in that int is x+1
          */
-
-
-
-
-        return Double.valueOf(Math.log10(input)).intValue() + 1;
+        //Take log of absolute value so that in case the input is negative the log value doesn't end as NaN
+        return Double.valueOf(Math.log10(Math.abs(input))).intValue() + 1;
     }
 
 
