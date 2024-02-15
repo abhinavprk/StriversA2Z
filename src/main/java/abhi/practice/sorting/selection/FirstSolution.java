@@ -2,6 +2,16 @@ package abhi.practice.sorting.selection;
 
 import java.util.Arrays;
 
+/**
+ * Find the index of the smallest element
+ * swap it with the first position
+ *
+ * Find the index of the second element
+ * swap it with the second position
+ *
+ * and so on
+ *
+ */
 public class FirstSolution {
     public static void main(String[] args) {
         int [] input = {12, 2, 45, 33, 7, 28, 6};

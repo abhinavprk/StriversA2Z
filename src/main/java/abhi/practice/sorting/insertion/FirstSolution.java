@@ -2,26 +2,25 @@ package abhi.practice.sorting.insertion;
 
 import java.util.Arrays;
 
+/**
+ * Assume that the array is sorted until first element
+ * From second element, select an element and insert it at the correct position
+ */
 public class FirstSolution {
     public static void main(String[] args) {
-        int [] input = {12, 2, 45, 33, 7, 28, 6};
+        int[] input = {12, 2, 45, 33, 7, 28, 6};
         System.out.println(Arrays.toString(sortArray(input)));
     }
 
     private static int[] sortArray(int[] input) {
-        for (int i = 0; i < input.length; i++) {
-            boolean swapped = false;
-            for (int j = 0; j < input.length -1-i; j++) {
-                if(input[j] > input[j+1]){
-                    int temp = input[j];
-                    input[j] = input[j+1];
-                    input[j+1] = temp;
-                    swapped = true;
-                }
+        for (int i = 1; i < input.length; i++) {
+            int curr = input[i];
+            int j = i - 1;
+            while (j >= 0 && input[j] > curr) {
+                input[j + 1] = input[j];
+                j--;
             }
-            if(!swapped){
-                break;
-            }
+            input[j + 1] = curr;
         }
         return input;
     }
