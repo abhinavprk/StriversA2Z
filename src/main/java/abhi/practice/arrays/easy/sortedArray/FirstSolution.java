@@ -1,4 +1,4 @@
-package abhi.practice.arrays.easy.sorted_array;
+package abhi.practice.arrays.easy.sortedArray;
 
 /**
  * Problem Statement: Given an array of size n, write a program to check if the given array is sorted in
