@@ -1,8 +1,7 @@
-package abhi.practice.arrays.easy.longestSubarryWithSumN;
+package abhi.practice.arrays.easy.longestSubArrayWithSumKPositiveAndNegatives;
 
-import java.util.Arrays;
 
-public class Solution2 {
+public class Solution1 {
     public static void main(String[] args) {
         int [] input = {2,3,5,1,9};
         int k = 10;
@@ -24,16 +23,12 @@ public class Solution2 {
      * Find all the sub arrays whose sum is equal to K and return the length of the longest.
      */
     private static int lengthOfLongestSubArray(int[] input, int k) {
-        Arrays.sort(input);
         int count = 0;
         for(int i = 0; i<input.length; i++){
-            if(input[i] >= k){
-                break;
-            }
             for(int j = i+1; j<input.length; j++){
                 int n = i;
                 int sum = 0;
-                while(n<=j && (input[n]<=k)){
+                while(n<=j){
                     sum = sum + input[n];
                     n++;
                 }

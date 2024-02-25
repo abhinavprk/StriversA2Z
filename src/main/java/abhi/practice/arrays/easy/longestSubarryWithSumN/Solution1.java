@@ -1,6 +1,5 @@
 package abhi.practice.arrays.easy.longestSubarryWithSumN;
 
-import java.util.Arrays;
 
 public class Solution1 {
     public static void main(String[] args) {
