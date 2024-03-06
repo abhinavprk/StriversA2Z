@@ -13,6 +13,10 @@ public class Solution3 {
         int k1 = 5;
 
         System.out.println(lengthOfLongestSubArray(input1, k1));
+        int [] input2 = {-1,1,1};
+        int k2 = 1;
+
+        System.out.println(lengthOfLongestSubArray(input2, k2));
     }
 
     /**
