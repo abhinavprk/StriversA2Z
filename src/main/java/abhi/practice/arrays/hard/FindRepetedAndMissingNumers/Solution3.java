@@ -57,8 +57,8 @@ public class Solution3 {
 
         // Last step: Identify the numbers:
         int cnt = 0;
-        for (int i = 0; i < n; i++) {
-            if (a[i] == zero) cnt++;
+        for (int j : a) {
+            if (j == zero) cnt++;
         }
 
         if (cnt == 2) return new int[]{zero, one};
